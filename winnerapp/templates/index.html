@@ -8,21 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-x6VYZ62vpk7mhJSPOv97QFHIzIJuPOoP2KAyZKJIoimlKGa8c2gUz5lgwuvwa2F4q0p9XyFqFc86dUlEe7fJbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    
 
+
+    
     <title>Home</title>
 </head>
 <style>
     body {
         font-family: 'Lato', sans-serif;
     }
-
+    .card{
+  border: none;
+}
     .navbar.scrolled {
         background-color: #fff;
         /* Set the background color for the scrolled state */
@@ -100,6 +112,7 @@
         background-color: rgb(252, 252, 255);
         /* Change the color of the active '-' */
     }
+
 </style>
 
 <body>
@@ -183,6 +196,9 @@
                     exams.Our institute is mainly focused on delivering quality classes as per the syllabus published by
                     kerala PSC/SSC. Join with us and Discover a new way of learning!!</p>
             </div>
+            <div class="col-lg-6 pt-4">
+                <img src="{% static 'images/educational_image.png' %}" alt="educatio9n Image" class="img-fluid">
+            </div>
         </div>
     </div>
     <div class="container-fluid" style="margin-top: 40px;">
@@ -191,38 +207,176 @@
         </div>
      
     </div>
-
-    <div class="container">
-        
+    <div class="container mt-5">
+        <div class="row " style="margin-left: 120px;">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn ">
+                
+                    <div class="circle d-flex align-items-center "><i class='bx bx-book-alt'></i></div>
+                    <h5>Topic Wise Mock Test</h5>
+                </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn ">
+               
+                    <div class="circle d-flex align-items-center "><i class='bx bxs-graduation'></i></div>
+                    <h5>Doubt Clearing Sessions</h5>
+                </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn ">
+                
+                    <div class="circle d-flex align-items-center "><i class='bx bxs-school'></i></div>
+                    <h5>Classes as per syllabus </h5>
+                </div>
+        </div>
     </div>
 
+    <div class="container-fluid mt-5">
+        <div class="heading">
+            <h2 class="text-center">Our Toppers</h2>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row" id="productContainer">
+            
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                    <div class="card card-radius">
+
+                                <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image" class="card-img-top img-fluid">
+                            
+                        
+                        
+                        <div class="card-body">
+                            
+                                <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
+                            
+                            <p class="card-text" style="color: #000B41; font-size: 18px;">
+                                Rank 1 in Keam exam
+                            </p>
+
+                        </div>
+                    </div>
+          
+                    <!-- Add the following code at the bottom of the card -->
+                    
+
+                    
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                    <div class="card card-radius">
+
+                                <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image" class="card-img-top img-fluid">
+                            
+                        
+                        
+                        <div class="card-body">
+                            
+                                <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
+                            
+                            <p class="card-text" style="color: #000B41; font-size: 18px;">
+                                Rank 1 in Keam exam
+                            </p>
+
+                        </div>
+                    </div>
+          
+                    <!-- Add the following code at the bottom of the card -->
+                    
+
+                    
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                    <div class="card card-radius">
+
+                                <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image" class="card-img-top img-fluid">
+                            
+                        
+                        
+                        <div class="card-body">
+                            
+                                <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
+                            
+                            <p class="card-text" style="color: #000B41; font-size: 18px;">
+                                Rank 1 in Keam exam
+                            </p>
+
+                        </div>
+                    </div>
+          
+                    <!-- Add the following code at the bottom of the card -->
+                    
+
+                    
+                </div>
+            
+          </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row row-content">
+            <div class="col-md-6">
+                <h1>Featured <span style="color: #dc9600;">Courses</span></h1>
+            </div>
+            <div class="col-md-6 pt-3 text-md-right">
+                <button class="btn" style="    background-color: transparent;
+                background-image: linear-gradient(90deg, #399a45 0%, #2f6535 50%); color: #fff;">Buy Courses</button>
+            </div>
+        </div>
+    </div>
+    
+        <div class="slick-slider">
+            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 1"></div>
+            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 2"></div>
+            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 3"></div>
+            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 4"></div>
+            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 5"></div>
+            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 6"></div>
+            <!-- Add more slides as needed -->
+          </div>
+    
+   
 
 
-    <script src="{% static 'js/script.js' %}"></script>
+
+
+
+
+
+<script src="{% static 'script/script.js' %}"></script>
+<!-- Add jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Add Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+    <script src="{% static 'script/bootstrap.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            effect: "fade",
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 4000, // Adjust the delay in milliseconds between slides
-                disableOnInteraction: false, // Continue autoplay even when the user interacts with the slider
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
+        
+
+
+
+var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 4000, // Adjust the delay in milliseconds between slides
+        disableOnInteraction: false, // Continue autoplay even when the user interacts with the slider
+    },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
 
 
         window.addEventListener("scroll", function () {
@@ -233,6 +387,36 @@
                 navbar.classList.remove("scrolled");
             }
         });
+
+    jQuery(document).ready(function($){
+    // Initialize Slick slider
+    $(".slick-slider").slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3, // Set the number of slides to show at a time
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768, // Breakpoint for mobile devices
+          settings: {
+            slidesToShow: 1, // Display one slide at a time in mobile view
+          }
+        },
+        {
+          breakpoint: 992, // Breakpoint for tablets
+          settings: {
+            slidesToShow: 2, // Display two slides at a time on tablets
+          }
+        }
+      ],
+      prevArrow: '<button type="button" class="slick-prev">&#9665;</button>', // Unicode arrow symbol
+      nextArrow: '<button type="button" class="slick-next">&#9655;</button>', // Unicode arrow symbol
+      // You can add more options based on your requirements
+    });
+  });
+
+
     </script>
 
 </body>
