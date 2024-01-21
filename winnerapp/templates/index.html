@@ -8,33 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-x6VYZ62vpk7mhJSPOv97QFHIzIJuPOoP2KAyZKJIoimlKGa8c2gUz5lgwuvwa2F4q0p9XyFqFc86dUlEe7fJbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-x6VYZ62vpk7mhJSPOv97QFHIzIJuPOoP2KAyZKJIoimlKGa8c2gUz5lgwuvwa2F4q0p9XyFqFc86dUlEe7fJbA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 
-    
+
+
+
+
+
+
     <title>Home</title>
 </head>
 <style>
+    a{
+        list-style: none;
+        text-decoration: none;
+    }
     body {
         font-family: 'Lato', sans-serif;
     }
-    .card{
-  border: none;
-}
+
+    .card {
+        border: none;
+    }
+
     .navbar.scrolled {
         background-color: #fff;
         /* Set the background color for the scrolled state */
@@ -113,6 +121,165 @@
         /* Change the color of the active '-' */
     }
 
+    .counter {
+        text-align: center;
+        background-color: #2f6535;
+        /* Set your desired background color */
+        padding: 50px;
+        /* Adjust padding as needed */
+    }
+
+    .counter h2 {
+        font-size: 24px;
+        /* Set your desired font size */
+        color: #dc9600;
+        /* Set your desired heading color */
+        margin-bottom: 10px;
+        /* Adjust margin as needed */
+    }
+
+    .counter-count {
+        font-size: 50px;
+        font-weight: bold;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .swiper-container {
+        width: 100%;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .portfolio-sections {
+        text-align: center;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .client-photo {
+        width: 100px;
+        /* Adjust the width of the client's photo */
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-pagination-bullet {
+        background-color: #ff0000;
+    }
+
+    .portfolio-pagination-bullet-active {
+        background-color: #00ff00;
+    }
+    .custom-card {
+    border-radius: 0; /* Adjust the value as needed */
+    }
+    .btn{
+  border-radius: 0;
+}
+.form-control:focus {
+  border-color: #ced4da; 
+  box-shadow: none; 
+}
+.accordion-button {
+            color: #000; 
+            background-color: transparent; 
+            border: none; 
+        }
+
+        .accordion-button:hover {
+            background-color: transparent; 
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #000;
+            background-color: transparent; 
+        }
+
+        .accordion-body {
+            border-top: 1px solid #dee2e6; 
+        }
+footer {
+            background-color: #2f6535;
+            color: #fff;
+            padding: 50px 0; /* Increase padding top and bottom */
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+           
+        }
+        .footer-links li {
+            margin-bottom: 10px; /* Add margin between list items */
+        }
+        .footer_links ul li a  {
+    color: #DDD;
+	display: block;
+	
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.3s ease;
+        }
+        .footer_links ul li a:hover {
+            color: #FFF;
+	padding-left: 7px;
+        }
+        .footer-address {
+            margin-top: 20px;
+        }
+        .footer-social {
+            margin-top: 20px;
+        }
+        .copyright {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .copyright i {
+            margin-right: 5px;
+        }
+        .footer-social a {
+            color: #FFF;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	line-height: 40px;
+	transition: all 0.5s ease;
+    }
+    .footer-social a:hover {
+     color: #151515;
+	background-color: #FFF;
+    }
+    .footer-social h4 {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+        .centered-buttons {
+            position: absolute;
+            top: 50%; /* Adjust the vertical position for smaller screens */
+            left: 58%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centered-buttons-row {
+            flex-direction: column; /* Change the direction to column on smaller screens */
+            align-items: center;
+        }
+
+        .centered-buttons button {
+            font-size: 8px; /* Decrease font size for smaller screens */
+            padding: 8px 15px; /* Decrease padding for smaller screens */
+        }
+    }
 </style>
 
 <body>
@@ -165,25 +332,34 @@
 
 
 
-
-    <div class="swiper mySwiper" style="margin-top: 85px;">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide-sections">
-                <div class="slide-content">
-                    <img src="{% static 'images/Blurred_people_third_cover.png' %}" />
+    <div class="swiper-container" id="swiper1" style="margin-top: 85px;">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide slide-sections">
+                    <div class="slide-content">
+                        <img src="{% static 'images/Blurred_people_third_cover.png' %}" />
+                        <div class="centered-buttons">
+                            <button>Online Class</button>
+                            <button>Offline Class</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide slide-sections">
-                <div class="slide-content">
-                    <img src="{% static 'images/Blurred_Traffic_second_image.png' %}" />
+                <div class="swiper-slide slide-sections">
+                    <div class="slide-content">
+                        <img src="{% static 'images/Blurred_Traffic_second_image.png' %}" />
+                        <div class="centered-buttons">
+                            <button>Online Class</button>
+                            <button>Offline Class</button>
+                        </div>
+                    </div>
                 </div>
+    
             </div>
-
-            <div class="swiper-pagination "></div>
-
+            <div class="swiper-pagination"></div>
         </div>
     </div>
+
 
 
     <div class="container" style="margin-top: 40px;">
@@ -191,7 +367,8 @@
             <div class="col-lg-6">
                 <h2>Welcome To Winners Academy For Technical Exams</h2>
 
-                <p class="pt-4">Winners academy for technical exams is a leading institution in kerala run by passionate educators in
+                <p class="pt-4">Winners academy for technical exams is a leading institution in kerala run by passionate
+                    educators in
                     the field of technical coaching. We are providing online technical classes for Kerala PSC and SSC
                     exams.Our institute is mainly focused on delivering quality classes as per the syllabus published by
                     kerala PSC/SSC. Join with us and Discover a new way of learning!!</p>
@@ -205,25 +382,25 @@
         <div class="heading">
             <h2 class="text-center">Our Qualities</h2>
         </div>
-     
+
     </div>
     <div class="container mt-5">
         <div class="row " style="margin-left: 120px;">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn ">
-                
-                    <div class="circle d-flex align-items-center "><i class='bx bx-book-alt'></i></div>
-                    <h5>Topic Wise Mock Test</h5>
-                </div>
+
+                <div class="circle d-flex align-items-center "><i class='bx bx-book-alt'></i></div>
+                <h5>Topic Wise Mock Test</h5>
+            </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn ">
-               
-                    <div class="circle d-flex align-items-center "><i class='bx bxs-graduation'></i></div>
-                    <h5>Doubt Clearing Sessions</h5>
-                </div>
+
+                <div class="circle d-flex align-items-center "><i class='bx bxs-graduation'></i></div>
+                <h5>Doubt Clearing Sessions</h5>
+            </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn ">
-                
-                    <div class="circle d-flex align-items-center "><i class='bx bxs-school'></i></div>
-                    <h5>Classes as per syllabus </h5>
-                </div>
+
+                <div class="circle d-flex align-items-center "><i class='bx bxs-school'></i></div>
+                <h5>Classes as per syllabus </h5>
+            </div>
         </div>
     </div>
 
@@ -235,148 +412,444 @@
 
     <div class="container mt-5">
         <div class="row" id="productContainer">
-            
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
-                    <div class="card card-radius">
 
-                                <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image" class="card-img-top img-fluid">
-                            
-                        
-                        
-                        <div class="card-body">
-                            
-                                <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
-                            
-                            <p class="card-text" style="color: #000B41; font-size: 18px;">
-                                Rank 1 in Keam exam
-                            </p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="card card-radius">
 
-                        </div>
+                    <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image"
+                        class="card-img-top img-fluid">
+
+
+
+                    <div class="card-body">
+
+                        <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
+
+                        <p class="card-text" style="color: #000B41; font-size: 18px;">
+                            Rank 1 in Keam exam
+                        </p>
+
                     </div>
-          
-                    <!-- Add the following code at the bottom of the card -->
-                    
-
-                    
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
-                    <div class="card card-radius">
 
-                                <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image" class="card-img-top img-fluid">
-                            
-                        
-                        
-                        <div class="card-body">
-                            
-                                <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
-                            
-                            <p class="card-text" style="color: #000B41; font-size: 18px;">
-                                Rank 1 in Keam exam
-                            </p>
+                <!-- Add the following code at the bottom of the card -->
 
-                        </div>
+
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="card card-radius">
+
+                    <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image"
+                        class="card-img-top img-fluid">
+
+
+
+                    <div class="card-body">
+
+                        <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
+
+                        <p class="card-text" style="color: #000B41; font-size: 18px;">
+                            Rank 1 in Keam exam
+                        </p>
+
                     </div>
-          
-                    <!-- Add the following code at the bottom of the card -->
-                    
-
-                    
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
-                    <div class="card card-radius">
 
-                                <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image" class="card-img-top img-fluid">
-                            
-                        
-                        
-                        <div class="card-body">
-                            
-                                <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
-                            
-                            <p class="card-text" style="color: #000B41; font-size: 18px;">
-                                Rank 1 in Keam exam
-                            </p>
+                <!-- Add the following code at the bottom of the card -->
 
-                        </div>
+
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <div class="card card-radius">
+
+                    <img src="{% static 'images/product_image_FROH0pr.png' %}" alt="Product Image"
+                        class="card-img-top img-fluid">
+
+
+
+                    <div class="card-body">
+
+                        <h2 class="card-title" style="color: #000B41;">Akhil Davis</h2>
+
+                        <p class="card-text" style="color: #000B41; font-size: 18px;">
+                            Rank 1 in Keam exam
+                        </p>
+
                     </div>
-          
-                    <!-- Add the following code at the bottom of the card -->
-                    
-
-                    
                 </div>
-            
-          </div>
+
+                <!-- Add the following code at the bottom of the card -->
+
+
+
+            </div>
+
+        </div>
     </div>
-    <div class="container mt-5">
-        <div class="row row-content">
-            <div class="col-md-6">
+    <div class="container mt-5 p-3">
+        <div class="row ">
+            <div class="col-md-9">
                 <h1>Featured <span style="color: #dc9600;">Courses</span></h1>
             </div>
-            <div class="col-md-6 pt-3 text-md-right">
-                <button class="btn" style="    background-color: transparent;
-                background-image: linear-gradient(90deg, #399a45 0%, #2f6535 50%); color: #fff;">Buy Courses</button>
+            <div class="col-md-3 ">
+                <button class="btn" style="background-color: transparent;
+                    background-image: linear-gradient(90deg, #399a45 0%, #2f6535 50%); color: #fff;">Buy
+                    Courses</button>
+            </div>
+        </div>
+        <div class="row  p-5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4  ">
+                <img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4  ">
+                <img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                <img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="counter mt-5">
+        <h2>Your Heading Here</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="count-up">
+                        <p class="counter-count">300 </p>
+                        <h3 style="color: #fff;">Students Enrolled</h3>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="count-up">
+                        <p class="counter-count">200 </p>
+                        <h3 style="color: #fff;">Rank Holders</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    
-        <div class="slick-slider">
-            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 1"></div>
-            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 2"></div>
-            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 3"></div>
-            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 4"></div>
-            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 5"></div>
-            <div><img src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Slide 6"></div>
+
+
+
+    <div class="container mt-4">
+        <div class="heading">
+            <h1 class="text-center">Our Sucess <span style="color: #dc9600;">Stories</span></h1>
+        </div>
+    </div>
+
+    <div class="swiper-container mt-5" id="swiper2">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide portfolio-sections">
+                <img class="client-photo" src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Client 1 Photo">
+                <h3>Client 1</h3>
+                <p class="portfolio_para">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua."</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide portfolio-sections">
+                <img class="client-photo" src="{% static 'images/product-2_0MvBJoj.png' %}" alt="Client 2 Photo">
+                <h3>Client 2</h3>
+                <p class="portfolio_para">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat."</p>
+            </div>
+
             <!-- Add more slides as needed -->
-          </div>
-    
-   
+        </div>
+
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination "></div> -->
+    </div>
+
+    <div class="container mt-5">
+        <div class="heading">
+            <h1 class="text-center">Frequently Asked Questions</h1>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{% static 'images/que.png' %}" alt="quetion_image" class="img-fluid">
+            </div>
+            <div class="col-lg-6 pt-4">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the  class. This is the second item's accordion
+                                body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the  class. This is the third item's accordion
+                                body. Nothing more exciting happening here in terms of content, but just filling up the
+                                space to make it look, at least at first glance, a bit more representative of how this
+                                would look in a real-world application.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="heading">
+            <h2>News</h2>
+        </div>
+    </div>
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mt-4">
+                <div class="card custom-card">
+                    <img class="card-img image-hover" src="{% static 'images/que.png' %}" alt="">
+
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: #000B41;">Our News We Launched </h4>
+                        <small class="text-muted cat">
+
+
+                        </small>
+                        <p class="card-text mt-1" style="color: #000B41;">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Nemo ea, odio et minima corporis tempore sed omnis dolorem, ad laboriosam
+                            suscipit temporibus tenetur, explicabo deserunt rem quasi ducimus molestiae! Rem.</p>
+                        <a href="" class="btn" style="background-color: #2f6535; color: #fff;">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+                        <div class="views"><i class="far fa-calendar-alt" style="color: #000B41;"></i>12/12/2024 </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mt-4">
+                <div class="card custom-card">
+                    <img class="card-img image-hover" src="{% static 'images/que.png' %}" alt="">
+
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: #000B41;">Our News We Launched </h4>
+                        <small class="text-muted cat">
+
+
+                        </small>
+                        <p class="card-text mt-1" style="color: #000B41;">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Nemo ea, odio et minima corporis tempore sed omnis dolorem, ad laboriosam
+                            suscipit temporibus tenetur, explicabo deserunt rem quasi ducimus molestiae! Rem.</p>
+                        <a href="" class="btn" style="background-color: #2f6535; color: #fff;">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+                        <div class="views"><i class="far fa-calendar-alt" style="color: #000B41;"></i> 12/12/2024</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mt-4">
+                <div class="card custom-card">
+                    <img class="card-img image-hover" src="{% static 'images/educational_image.png' %}" alt="">
+
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: #000B41;">Our News We Launched </h4>
+                        <small class="text-muted cat">
+
+
+                        </small>
+                        <p class="card-text mt-1" style="color: #000B41;">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Nemo ea, odio et minima corporis tempore sed omnis dolorem, ad laboriosam
+                            suscipit temporibus tenetur, explicabo deserunt rem quasi ducimus molestiae! Rem.</p>
+                        <a href="" class="btn" style="background-color: #2f6535; color: #fff;">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+                        <div class="views"><i class="far fa-calendar-alt" style="color: #dc9600;"></i> 12/12/2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h2>Talk to us about your goal. Schedule now!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn  mt-3" style="color: #fff; background-color: #2f6535;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="map-heading">
+            <h1 class="text-center">Our <span style="color: #dc9600;">Location</span></h1>
+        </div>
+
+    </div>
+    <div class="container mt-4">
+        <div class="map_bind">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471220.5631094339!2d88.04952462217592!3d22.6757520733225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1596988408134!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
 
 
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pt-4 footer_links">
+                    
+                    <ul class="footer-links">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#"class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Courses</a></li>
+                        <li><a href="#" class="text-white">Online Admission</a></li>
+                        <li><a href="#" class="text-white">Students Corner</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-4">
+                    <div class="footer-address">
+                        Organization Address<br>
+                        City, Country
+                    </div>
+                </div>
+                <div class="col-md-4 pt-4">
+                    <div class="footer-social">
+                        <h4>Follow Us</h4>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        &copy; WinnerAcademy.com All Rights Reserved | Designed and Developed by <a href="https://softverses.com/" class="text-white" target="_blank">Softverses</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/inorganik/CountUp.js/master/countUp.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="{% static 'script/script.js' %}"></script>
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Add Slick JS -->
 
 
 
-
-<script src="{% static 'script/script.js' %}"></script>
-<!-- Add jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-<!-- Add Slick JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    
+
+
     <script src="{% static 'script/bootstrap.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
 
 
 
     <script>
-        
+
+        ;
 
 
-
-var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 4000, // Adjust the delay in milliseconds between slides
-        disableOnInteraction: false, // Continue autoplay even when the user interacts with the slider
-    },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 4000, // Adjust the delay in milliseconds between slides
+                disableOnInteraction: false, // Continue autoplay even when the user interacts with the slider
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
 
 
         window.addEventListener("scroll", function () {
@@ -388,35 +861,38 @@ var swiper = new Swiper(".mySwiper", {
             }
         });
 
-    jQuery(document).ready(function($){
-    // Initialize Slick slider
-    $(".slick-slider").slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3, // Set the number of slides to show at a time
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 768, // Breakpoint for mobile devices
-          settings: {
-            slidesToShow: 1, // Display one slide at a time in mobile view
-          }
-        },
-        {
-          breakpoint: 992, // Breakpoint for tablets
-          settings: {
-            slidesToShow: 2, // Display two slides at a time on tablets
-          }
-        }
-      ],
-      prevArrow: '<button type="button" class="slick-prev">&#9665;</button>', // Unicode arrow symbol
-      nextArrow: '<button type="button" class="slick-next">&#9655;</button>', // Unicode arrow symbol
-      // You can add more options based on your requirements
-    });
-  });
+
+        $('.counter-count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+
+                //chnage count up speed here
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
 
 
+        var swiper2 = new Swiper('#swiper2', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '#swiper2 .swiper-button-next',
+                prevEl: '#swiper2 .swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4000, // Adjust the delay in milliseconds between slides
+                disableOnInteraction: false, // Continue autoplay even when the user interacts with the slider
+            },
+            pagination: {
+                el: '#swiper2 .swiper-pagination',
+                clickable: true,
+            },
+        });
     </script>
 
 </body>
