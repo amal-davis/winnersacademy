@@ -166,12 +166,12 @@
   transform: translate(-50%, -50%);
 }
 
-.centered-buttons button {
+.centered-buttons button  {
   font-size: 18px;
   padding: 10px 20px;
   margin: 5px;
-  background-color: #2f6535; /* Set the background color for the buttons */
-  color: #fff; /* Set the text color for the buttons */
+  background-color: #2f6535; 
+  color: #fff;
   border: none;
   cursor: pointer;
 }
@@ -191,7 +191,7 @@
           margin: 0 3px; /* Adjust the spacing between each '-' for smaller screens */
         }
       
-        .centered-content {
+        .centered-content  {
           font-size: 14px; /* Adjust the font size for smaller screens */
         }
         .portfolio_para{
