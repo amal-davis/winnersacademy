@@ -118,9 +118,11 @@ def add_course(request):
     if request.method == 'POST':
         image = request.FILES['image']
         url = request.POST['url']
+        heading = request.POST['heading']
+        text = request.POST['content']
 
         # Create and save the Course instance
-        Course.objects.create(image=image, url=url)
+        Course.objects.create(image=image, url=url,heading=heading,description=text)
 
         return redirect('add_course')
     courses = Course.objects.all()
@@ -136,10 +138,14 @@ def edit_course(request, course_id):
     if request.method == 'POST':
         image = request.FILES.get('image', course.image)
         url = request.POST.get('url', course.url)
+        heading = request.POST.get('heading',course.heading)
+        text = request.POST.get('content',course.description)
 
         # Update the Course instance with the new data
         course.image = image
         course.url = url
+        course.heading = heading
+        course.description = text
         course.save()
 
         return redirect('add_course')
@@ -293,3 +299,163 @@ def delete_contact(request, contact_id):
     content.delete()
     return redirect('contact_admin')
 
+
+def about_us(request):
+    team = Team.objects.all()
+    return render(request,'about_us.html',{'team':team})
+
+
+def add_team(request):
+    if request.method == 'POST':
+        image = request.FILES['image']
+        heading = request.POST['heading']
+        description = request.POST['description']
+
+        product = Team.objects.create(
+            image=image,
+            heading=heading,
+            description=description
+        )
+        product.save()
+        return redirect('add_team')
+    team = Team.objects.all()
+
+    return render(request, 'add_team.html',{'team':team})
+
+
+
+def edit_team(request, team_id):
+    team = get_object_or_404(Team, id=team_id)
+
+    if request.method == 'POST':
+        image = request.FILES.get('image', team.image)
+        heading = request.POST.get('heading', team.heading)
+        description = request.POST.get('description', team.description)
+
+        team.image = image
+        team.heading = heading
+        team.description = description
+        team.save()
+
+        return redirect('add_team')
+
+    return render(request, 'edit_team.html', {'team': team})
+
+
+
+
+def delete_team(request, team_id):
+    team = get_object_or_404(Team, id=team_id)
+    team.delete()
+    return redirect('add_team')
+
+
+def courses(request):
+    courses = Course.objects.all()
+    return render(request,'courses.html',{'courses':courses})
+
+
+def online_admission(request):
+    return render(request,'online_admision.html')
+
+
+def register_online_admission(request):
+    
+    if request.method == 'POST':
+        fname = request.POST['fname']
+        sname = request.POST['lname']
+        email = request.POST['email']
+        gender = request.POST['gender']
+        phno = request.POST['phno']
+        dob = request.POST['dob']
+        qualification = request.POST['qualification']
+        course = request.POST['course']
+
+        admision = Online_admission.objects.create(
+            
+            fname=fname,
+            lname=sname,
+            email=email,
+            phonno =phno,
+            gender=gender,
+            dob=dob,
+            qualification=qualification,
+            course=course
+        )
+        admision.save()
+        return redirect('online_admission')
+
+
+
+def online_admin_admision(request):
+    online = Online_admission.objects.all()
+    return render(request,'online_admin_admission.html',{'online':online})
+
+
+
+
+def delete_admision(request,admision_id):
+    content = get_object_or_404(Online_admission, id=admision_id)
+    content.delete()
+    return redirect('online_admin_admision') 
+
+
+def contact_page(request):
+    return render(request,'contact_us.html')
+
+
+
+
+def contact_page_submit(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+
+        contact = Contact_US.objects.create(
+            name=name,
+            email=email,
+            phone_no=phone,
+            message=message
+
+        )
+        contact.save()
+        messages.info(request,'We will get you soon')
+        return redirect('contact_page')
+
+
+
+def students_corner(request):
+    student = Add_student_corner.objects.all()
+    return render(request,'students_corner.html',{'student':student})
+
+
+def add_students_corner(request):
+    if request.method == 'POST':
+        image = request.FILES['image']
+        students = Add_student_corner.objects.create(
+           image=image 
+        )
+        students.save()
+        return redirect('add_students_corner')
+    students = Add_student_corner.objects.all()  
+    return render(request,'add_students_corner.html',{'students':students})
+
+
+def student_add_corner(request, student_id):
+    student = get_object_or_404(Add_student_corner, id=student_id)  # Use 'id' as the lookup parameter
+    if request.method == 'POST':
+        image = request.FILES.get('image')
+        if image:
+            student.image = image
+            student.save()
+            return redirect('add_students_corner')
+    else:
+        return render(request, 'edit_students_corner.html', {'student': student})
+    
+
+def delete_student(request,student_id):
+    content = get_object_or_404(Add_student_corner, id=student_id)
+    content.delete()
+    return redirect('add_students_corner')

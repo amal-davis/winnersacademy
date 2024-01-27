@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="{% static 'images/final_logo.png' %}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -122,20 +123,20 @@
                             <a class="nav-link mx-lg-2  ser" aria-current="page" href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="#">About Us</a>
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'about_us' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="#">Courses</a>
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'courses' %}">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="#">Online Admissions</a>
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'online_admission' %}">Online Admissions</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="#">Students Corner</a>
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'students_corner' %}">Students Corner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="#"> Contact</a>
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'contact_page' %}"> Contact</a>
                         </li>
 
                     </ul>

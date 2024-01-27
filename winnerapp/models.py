@@ -22,6 +22,8 @@ class Product(models.Model):
 
 class Course(models.Model):
     image = models.ImageField(upload_to='course_images/')
+    heading = models.CharField(max_length=255,default='')
+    description = models.TextField(default='')
     url = models.URLField()
 
     def __str__(self):
@@ -52,3 +54,25 @@ class Contact_US(models.Model):
     email = models.CharField(max_length=255)
     phone_no = models.CharField(max_length=255)
     message = models.TextField()
+
+class Team(models.Model):
+    image = models.ImageField(upload_to='team_images/')
+    heading = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.heading
+    
+class Online_admission(models.Model):
+    fname = models.CharField(max_length=255)
+    lname = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    phonno = models.CharField(max_length=255)
+    gender = models.CharField(max_length=255)
+    qualification = models.CharField(max_length=255)
+    course = models.CharField(max_length=255)
+    dob = models.CharField(max_length=255)
+
+
+class Add_student_corner(models.Model):
+      image = models.ImageField(upload_to='team_images/')
