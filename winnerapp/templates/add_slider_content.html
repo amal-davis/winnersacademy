@@ -127,7 +127,10 @@
                             <a class="nav-link mx-lg-2 ser" href="{% url 'about_us' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'courses' %}">Courses</a>
+                            <a class="nav-link mx-lg-2 ser" href="#">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2  ser" href="{% url 'topers' %}">Our Topers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'online_admission' %}">Online Admissions</a>
@@ -135,6 +138,9 @@
 
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'students_corner' %}">Students Corner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'career' %}">Careers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'contact_page' %}"> Contact</a>
@@ -175,16 +181,10 @@
             <input type="file" class="form-control" name="image" accept="image/*" required>
             <br>
         
-            <!-- Input for Online Class URL -->
-            <label for="online_class_url">Online Class URL:</label>
-            <input type="url"  class="form-control" name="online_class_url" required>
-            <br>
+
         
             <!-- Input for Offline Class URL -->
-            <label for="offline_class_url">Offline Class URL:</label>
-            <input type="url"  class="form-control" name="offline_class_url" required>
-            <br>
-        
+  
             <!-- Submit Button -->
             <input type="submit" class="btn" value="Submit" style="color:#fff ; background-color: #2f6535;">
         </form>
@@ -197,8 +197,7 @@
         <thead class="thead">
             <tr>
                 <th>Image</th>
-                <th>Online Class URL</th>
-                <th>Offline Class URL</th>
+
                 <th>Action</th>
             </tr>
         </thead>
@@ -208,11 +207,10 @@
                 <td> 
                     <img src="{{ content.image.url }}" alt="swiper_image" style="width: 100px; height: 100px;">
                 </td>
-                <td>{{ content.online_class_url }}</td>
-                <td>{{ content.offline_class_url  }}</td>
+
                 <td>
                     <a href="{% url 'delete_swiper_content' content.id %}" class="btn btn-danger">Delete</a>
-                    <a href="{% url 'edit_swiper_content' content.id %}" class="btn btn-outline-dark ">Edit</a>
+                    <a href="{% url 'edit_swiper_contents' content.id %}" class="btn btn-outline-dark ">Edit</a>
                 </td>
             </tr>
             {% endfor %}

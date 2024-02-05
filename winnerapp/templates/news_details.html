@@ -57,33 +57,33 @@ body {
 
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #000;
-}
+.nav_hover:hover,
+    .nav_hover.active {
+        color: #000;
+    }
 
-.nav-link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    /* Set the height of the underline */
-    background: linear-gradient(to right, #2f6535, transparent);
-    /* Use linear gradient for the underline effect */
-    transform: scaleX(0);
-    /* Initially hide the underline */
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-in-out;
-    /* Add a smooth transition for the underline */
-}
+    .nav_hover::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        /* Set the height of the underline */
+        background: linear-gradient(to right, #2f6535, transparent);
+        /* Use linear gradient for the underline effect */
+        transform: scaleX(0);
+        /* Initially hide the underline */
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-in-out;
+        /* Add a smooth transition for the underline */
+    }
 
-.nav-link:hover::before,
-.nav-link.active::before {
-    transform: scaleX(1);
-    /* Expand the underline on hover and in the active state */
-}
+    .nav_hover:hover::before,
+    .nav_hover.active::before {
+        transform: scaleX(1);
+        /* Expand the underline on hover and in the active state */
+    }
 
 .navbar-brand {
     font-weight: 500;
@@ -102,7 +102,7 @@ box-shadow: none;
 <body>
     
 
-    <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top scrolled" id="main-navbar">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="#">
                 <img src="{% static 'images/final_logo.png' %}" alt="Your Logo" width="100" height="50">
@@ -118,30 +118,43 @@ box-shadow: none;
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2  ser" aria-current="page" href="{% url 'index' %}">Home</a>
+                            <a class="nav-link nav_hover mx-lg-2  ser" aria-current="page" href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'about_us' %}">About Us</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'about_us' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'courses' %}">Courses</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="https://yomrg.courses.store/" target="_blank">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'online_admission' %}">Online Admissions</a>
+                            <a class="nav-link mx-lg-2 nav_hover  ser" href="{% url 'topers' %}">Results</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'online_admission' %}">Online Admissions</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'students_corner' %}">Students Corner</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'students_corner' %}">Students Corner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'contact_page' %}"> Contact</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="https://techhubacademy.com/" target="_blank">Offline Classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'career' %}">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'contact_page' %}"> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" mx-lg-2 nav-link  ser login-button " href="#" style="color: #fff;background-color: #2f6535;">Download App</a>
                         </li>
 
                     </ul>
 
                 </div>
             </div>
-            <a href="#" class="login-button">Login</a>
+           
+            <a href="#" class="login-button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -163,6 +176,30 @@ box-shadow: none;
         </div>
     </div>
 
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <img src="{% static 'images/final_logo.png' %}" alt="Your Logo" width="100" height="50" class="mx-auto d-block">
+              
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col">
+                    <button type="button" class="btn  btn-lg btn-block" onclick="redirectToEduplus()" style="color: #fff; background-color: #2f6535;">Winners Eduplus</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn  btn-lg btn-block" onclick="redirectToEdutech()" style="color: #fff; background-color: #2f6535;">Winners Edutech</button>
+                </div>
+              </div>
+              <p class="text-center">Use Org Code - YOMRG For log in in Winners Edutech</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="{% static 'script/bootstrap.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

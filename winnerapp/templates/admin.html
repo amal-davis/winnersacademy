@@ -150,8 +150,11 @@
                             <a class="nav-link mx-lg-2 ser" href="{% url 'about_us' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'courses' %}">Courses</a>
+                            <a class="nav-link mx-lg-2 ser" href="#">Courses</a>
                         </li>
+                        <li class="nav-item">
+                          <a class="nav-link mx-lg-2  ser" href="{% url 'topers' %}">Our Topers</a>
+                      </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'online_admission' %}">Online Admissions</a>
                         </li>
@@ -160,6 +163,9 @@
                             <a class="nav-link mx-lg-2 ser" href="{% url 'students_corner' %}">Students Corner</a>
                         </li>
                         <li class="nav-item">
+                          <a class="nav-link mx-lg-2 ser" href="{% url 'career' %}">Careers</a>
+                      </li>
+                        <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'contact_page' %}"> Contact</a>
                         </li>
 
@@ -167,7 +173,7 @@
 
                 </div>
             </div>
-            <a href="#" class="login-button">Login</a>
+            <a href="{% url 'logout' %}" class="login-button">Log Out</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -208,17 +214,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 pt-5">
-        <div class="card position-relative" style="height: 200px;">
-          <img class="card-img"
-            src=""
-            alt="" height="200px">
-          <div class="overlay d-flex flex-column justify-content-center align-items-center">
-            <h4 class="card-title text-white"> Add Course contents </h4>
-            <a href="{% url 'add_course' %}" class="btn  mt-3" style="background-color: #2f6535; color: #ffff;">GO</a>
-          </div>
-        </div>
-      </div>
+
       <div class="col-md-4 pt-5">
         <div class="card position-relative" style="height: 200px;">
           <img class="card-img"
@@ -274,6 +270,33 @@
           <div class="overlay d-flex flex-column justify-content-center align-items-center">
             <h4 class="card-title text-white"> Add Students Corner </h4>
             <a href="{% url 'add_students_corner' %}" class="btn  mt-3" style="background-color: #2f6535; color: #ffff;">GO</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pt-5">
+        <div class="card position-relative" style="height: 200px;">
+          <img class="card-img" src="" alt="" height="200px">
+          <div class="overlay d-flex flex-column justify-content-center align-items-center">
+            <h4 class="card-title text-white"> Careers </h4>
+            <a href="{% url 'admin_careers' %}" class="btn  mt-3" style="background-color: #2f6535; color: #ffff;">GO</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pt-5">
+        <div class="card position-relative" style="height: 200px;">
+          <img class="card-img" src="" alt="" height="200px">
+          <div class="overlay d-flex flex-column justify-content-center align-items-center">
+            <h4 class="card-title text-white"> Add Syllabus </h4>
+            <a href="{% url 'add_syllabus' %}" class="btn  mt-3" style="background-color: #2f6535; color: #ffff;">GO</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pt-5">
+        <div class="card position-relative" style="height: 200px;">
+          <img class="card-img" src="" alt="" height="200px">
+          <div class="overlay d-flex flex-column justify-content-center align-items-center">
+            <h4 class="card-title text-white"> Add Courses </h4>
+            <a href="{% url 'add_courese' %}" class="btn  mt-3" style="background-color: #2f6535; color: #ffff;">GO</a>
           </div>
         </div>
       </div>

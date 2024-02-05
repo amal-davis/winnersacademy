@@ -6,9 +6,8 @@ from django.db import models
 
 class SwiperContent(models.Model):
     image = models.ImageField(upload_to='swiper_images/')
-    online_class_url = models.URLField()
-    offline_class_url = models.URLField()
-
+   
+    
 
 
 class Product(models.Model):
@@ -20,19 +19,12 @@ class Product(models.Model):
         return self.heading
     
 
-class Course(models.Model):
-    image = models.ImageField(upload_to='course_images/')
-    heading = models.CharField(max_length=255,default='')
-    description = models.TextField(default='')
-    url = models.URLField()
 
-    def __str__(self):
-        return f"Course {self.id}"
     
 
 
 class Portfolio_content(models.Model):
-    image = models.ImageField(upload_to='swiper_images/')
+    video_url = models.URLField(blank=True, null=True)
     heading = models.CharField(max_length=255)
     paragraph = models.TextField()
 
@@ -58,6 +50,7 @@ class Contact_US(models.Model):
 class Team(models.Model):
     image = models.ImageField(upload_to='team_images/')
     heading = models.CharField(max_length=255)
+    qualification = models.CharField(max_length=255,default='')
     description = models.TextField()
 
     def __str__(self):
@@ -76,3 +69,26 @@ class Online_admission(models.Model):
 
 class Add_student_corner(models.Model):
       image = models.ImageField(upload_to='team_images/')
+
+
+class careers(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    resume = models.FileField(upload_to='resumes',default='default_pdf.pdf')
+    qualafication = models.CharField(max_length=255,default='')
+    dob = models.CharField(max_length=255,default='')
+
+
+
+class Syllabus(models.Model):
+    name = models.CharField(max_length=255)
+    sylabbus_pdf = models.FileField(upload_to='resumes',default='default_pdf.pdf')
+
+
+class courses(models.Model):
+      image = models.ImageField(upload_to='team_images/')
+      name = models.CharField(max_length=255)
+      url = models.URLField(blank=True, null=True)
+    
+

@@ -58,12 +58,12 @@
 
     }
 
-    .nav-link:hover,
-    .nav-link.active {
+    .nav_hover:hover,
+    .nav_hover.active {
         color: #000;
     }
 
-    .nav-link::before {
+    .nav_hover::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -80,8 +80,8 @@
         /* Add a smooth transition for the underline */
     }
 
-    .nav-link:hover::before,
-    .nav-link.active::before {
+    .nav_hover:hover::before,
+    .nav_hover.active::before {
         transform: scaleX(1);
         /* Expand the underline on hover and in the active state */
     }
@@ -232,30 +232,43 @@ footer {
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2  ser" aria-current="page" href="{% url 'index' %}">Home</a>
+                            <a class="nav-link nav_hover mx-lg-2  ser" aria-current="page" href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2  ser" href="{% url 'about_us' %}">About Us</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'about_us' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2  ser" href="{% url 'courses' %}">Courses</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="https://yomrg.courses.store/" target="_blank">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active ser" href="{% url 'online_admission' %}">Online Admissions</a>
+                            <a class="nav-link mx-lg-2 nav_hover  ser" href="{% url 'topers' %}">Results</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 nav_hover active ser" href="{% url 'online_admission' %}">Online Admissions</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'students_corner' %}">Students Corner</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'students_corner' %}">Students Corner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'contact_page' %}"> Contact</a>
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="https://techhubacademy.com/" target="_blank">Offline Classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'career' %}">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 nav_hover ser" href="{% url 'contact_page' %}"> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" mx-lg-2 nav-link  ser login-button " href="#" style="color: #fff;background-color: #2f6535;">Download App</a>
                         </li>
 
                     </ul>
 
                 </div>
             </div>
-            <a href="#" class="login-button">Login</a>
+           
+            <a href="#" class="login-button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -279,7 +292,7 @@ footer {
                                 <div class="row">
 
                                 </div>
-                                <form method="post" action="{% url 'register_online_admission' %}" enctype="multipart/form-data" style="width: 120%;">
+                                <form method="post" action="{% url 'register_online_admission' %}" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     <div class="row">
                                         <div class="col-md-6">
@@ -348,10 +361,37 @@ footer {
           
           </div>
           </section>
+
+
+
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header text-center">
+                  <img src="{% static 'images/final_logo.png' %}" alt="Your Logo" width="100" height="50" class="mx-auto d-block">
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row mb-3">
+                    <div class="col">
+                        <button type="button" class="btn  btn-lg btn-block" onclick="redirectToEduplus()" style="color: #fff; background-color: #2f6535;">Winners Eduplus</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn  btn-lg btn-block" onclick="redirectToEdutech()" style="color: #fff; background-color: #2f6535;">Winners Edutech</button>
+                    </div>
+                  </div>
+                  <p class="text-center">Use Org Code - YOMRG For log in in Winners Edutech</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 pt-4 footer_links">
+                    <div class="col-md-3 pt-4 footer_links">
                         
                         <ul class="footer-links">
                             <li><a href="{% url 'index' %}" class="text-white">Home</a></li>
@@ -362,13 +402,16 @@ footer {
                             <li><a href="#" class="text-white">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4 pt-4">
+                    <div class="col-md-3 pt-4">
                         <div class="footer-address">
-                            Organization Address<br>
-                            City, Country
+                            Winners Academy for Technical exams <br>
+                            Tech hub campus <br>
+                            A Narayana business centre <br>
+                            Kadappakada <br>
+                            Kollam 691008 <br>
                         </div>
                     </div>
-                    <div class="col-md-4 pt-4">
+                    <div class="col-md-3 pt-4">
                         <div class="footer-social">
                             <h4>Follow Us</h4>
                             <a href="https://www.facebook.com/Winnerstechexams" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -376,6 +419,18 @@ footer {
                             <a href="https://api.whatsapp.com/send?phone=918136840030" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             <a href="https://www.youtube.com/channel/UCHCLGg93VHIWOM6bNFxqhEg" target="_blank"><i class="fab fa-youtube"></i></a>
                             <a href="https://t.me/joinchat/s2IlO3PyWuIzZmNl" target="_blank"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pt-4">
+                        <div class="app-link">
+                            <h4>Download App</h4>
+    
+                            <a href="">
+                                <img src="{% static 'images/google-play-badge.png' %}" alt="Download_app" style="height: 45px;">
+                            </a>
+                            <a href="">
+                                <img src="{% static 'images/apple_icon.png' %}" alt="Download_app"style="height: 45px;" >
+                            </a>
                         </div>
                     </div>
                 </div>

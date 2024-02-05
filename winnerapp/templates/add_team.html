@@ -122,7 +122,10 @@
                             <a class="nav-link mx-lg-2 ser" href="{% url 'about_us' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 ser" href="{% url 'courses' %}">Courses</a>
+                            <a class="nav-link mx-lg-2 ser" href="#">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2  ser" href="{% url 'topers' %}">Our Topers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'online_admission' %}">Online Admissions</a>
@@ -130,6 +133,9 @@
 
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'students_corner' %}">Students Corner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 ser" href="{% url 'career' %}">Careers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2 ser" href="{% url 'contact_page' %}"> Contact</a>
@@ -163,8 +169,11 @@
             <label for="heading">Name:</label>
             <input type="text" class="form-control" name="heading" required>
             <br>
-            <label for="description">Achievment:</label>
+            <label for="description">Desigination:</label>
             <textarea name="description" class="form-control" required></textarea>
+            <br>
+            <label for="heading">Qualification:</label>
+            <input type="text" class="form-control" name="qualification" required>
             <br>
             <input type="submit" class="btn" style="color: #fff; background-color: #2f6535;" value="Add">
         </form>
@@ -178,6 +187,7 @@
                 <th>Image</th>
                 <th>Name</th>
                 <th>achievement</th>
+                <th>Qualification</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -189,6 +199,7 @@
                 </td>
                 <td>{{ p.heading }}</td>
                 <td>{{ p.description }}</td>
+                <td>{{ p.qualification }}</td>
                 <td>
                     <a href="{% url 'delete_team' p.id %}" class="btn btn-danger">Delete</a>
                     <a href="{% url 'edit_team' p.id %}" class="btn btn-outline-dark ">Edit</a>  
